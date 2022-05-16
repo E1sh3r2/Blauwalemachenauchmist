@@ -31,6 +31,13 @@ body {
     transform: translate(1px, 2px);
 }
 
+#keys_help {
+    font-size: 15px;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 10px;
+}
+
 @media only screen and (max-width: 600px) {
     #content {
         max-width: 100%;
