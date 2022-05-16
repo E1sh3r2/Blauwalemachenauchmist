@@ -1,34 +1,41 @@
-let state = "Question"
-let question = ""
+(() => {
+    const STATES = { ANSWER: "answer", QUESTION: "question" }
+    const $content = document.getElementById("content");
 
-function selectRandomQuestion() {
-    question = Math.floor(Math.random() * questions.length)
-}
+    let currentState = STATES.QUESTION;
+    let currentQuestion = "";
 
-function displayQuestion(question) {
-    document.getElementById("content").innerHTML = `<div id="question">${questions[question].question}</div>`
-    state = "Answer"
-}
-
-function displayAnswer(question) {
-    document.getElementById("content").innerHTML = `<div id="question">${questions[question].question}</div>` + questions[question].answer
-    state = "Question"
-}
-
-function changeText() {
-    if (state === "Question") {
-        selectRandomQuestion()
-        displayQuestion(question)
-    } else {
-        displayAnswer(question)
+    const selectRandomQuestion = () => {
+        currentQuestion = Math.floor(Math.random() * questions.length);
     }
-}
 
-document.addEventListener('keyup', event => {
-    if (event.code === 'Space') {
-        changeText()
+    const displayQuestion = (question) => {
+        $content.innerHTML = questions[question].question;
+        currentState = STATES.ANSWER;
     }
-})
+    const displayAnswer = (question) => {
+        $content.innerHTML = `<div id="question">${questions[question].question}</div>` + questions[question].answer;
+        currentState = STATES.QUESTION;
+    }
 
-selectRandomQuestion()
-displayQuestion(question)
+    const changeText = () => {
+        if (currentState === STATES.QUESTION) {
+            selectRandomQuestion()
+            displayQuestion(currentQuestion);
+        } else {
+            displayAnswer(currentQuestion);
+        }
+    }
+
+    document.addEventListener("keyup", (event) => {
+        if (event.code === "Space") {
+            changeText();
+        }
+    });
+
+    $content.addEventListener("click", changeText)
+
+    selectRandomQuestion();
+    displayQuestion(currentQuestion);
+
+})()
