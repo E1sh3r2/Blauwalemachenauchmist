@@ -5,7 +5,7 @@ def main():
     file.close()
     paragraphs = text.split("\n\n")
     json = []
-    for paragraph in paragraphs:
+    for question_id, paragraph in enumerate(paragraphs):
         paragraph = paragraph.replace("Frage: ", "")
         parts = paragraph.split("Antwort:")
         for index, part in enumerate(parts):
@@ -16,18 +16,17 @@ def main():
             part = part.replace("- ", "&bull; ")
             part = part.replace("->", "&rarr;")
             fragments = part.split("**")
-            for fragmentNr, fragment in enumerate(fragments):
-                if len(fragments) == fragmentNr + 1:
+            for fragment_nr, fragment in enumerate(fragments):
+                if len(fragments) == fragment_nr + 1:
                     continue
-                if fragmentNr % 2 == 0:
+                if fragment_nr % 2 == 0:
                     part += fragment + "<strong>"
                 else:
                     part += fragment + "</strong>"
             parts[index] = part
-        part = {"question": parts[0], "answer": parts[1]}
+        part = {"id": question_id, "question": parts[0], "answer": parts[1]}
         json.append(part)
     json = str(json)
-    print(json)
     json = "const questions = " + json
     file = open("questions.js", "w")
     file.write(json)
