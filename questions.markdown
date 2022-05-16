@@ -151,9 +151,9 @@ Antwort:
 
 Frage: Welche Beziehungen gibt es in einer Datenbank?  
 Antwort:
-- 1 – n -> ein zu viele 
-- n – 1 -> viele zu eins 
-- n – m -> viele zu viele 
+- 1 zu n -> ein zu viele 
+- n zu 1 -> viele zu eins 
+- n zu m -> viele zu viele 
   - wird mit einer Zwischentabelle aufgelöst	
   - jeweils mit zwei 1 – n Beziehungen
 
