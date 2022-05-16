@@ -13,6 +13,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     min-height: 300px;
     min-width: 500px;
     max-width: 70%;
@@ -36,6 +37,10 @@ body {
     position: fixed;
     bottom: 0;
     margin-bottom: 10px;
+}
+
+#question {
+    font-size: 25px;
 }
 
 @media only screen and (max-width: 600px) {

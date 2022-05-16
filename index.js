@@ -1,22 +1,26 @@
 let state = "Question"
 let question = ""
 
-function displayQuestion() {
+function selectRandomQuestion() {
     question = Math.floor(Math.random() * questions.length)
+}
+
+function displayQuestion(question) {
     document.getElementById("content").innerHTML = questions[question].question
     state = "Answer"
 }
 
-function displayAnswer() {
-    document.getElementById("content").innerHTML = questions[question].answer
+function displayAnswer(question) {
+    document.getElementById("content").innerHTML = `<div id="question">${questions[question].question}</div>` + questions[question].answer
     state = "Question"
 }
 
 function changeText() {
     if (state === "Question") {
-        displayQuestion()
+        selectRandomQuestion()
+        displayQuestion(question)
     } else {
-        displayAnswer()
+        displayAnswer(question)
     }
 }
 
@@ -26,4 +30,5 @@ document.addEventListener('keyup', event => {
     }
 })
 
-displayQuestion()
+selectRandomQuestion()
+displayQuestion(question)

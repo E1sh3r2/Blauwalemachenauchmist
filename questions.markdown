@@ -1,4 +1,4 @@
-Frage: Definition Projekt  
+Frage: Definition Projekt
 Antwort: 
 - Einmaliges Vorhaben
 - Fester Start- und Endzeitpunkt
@@ -14,9 +14,8 @@ Antwort:
 - Zeit
 - nicht alle 3 Faktoren können gleichzeitig erfüllt werden
 
-Frage: Beschreibe Software-Kriterien  
-Antwort: 
-- Funktionalität - Umfang der Software\n
+Frage: Beschreibe Software-Kriterien,
+Antwort: Funktionalität - Umfang der Software\n
 - Zuverlässigkeit
   - Identische Funktionalität 
   - Über lange Zeiträume
@@ -64,8 +63,9 @@ Antwort:
   - Nur notwendige Eigenschaften bleiben behalten
 
 
-Frage: Was ist ein Objekt?  
+Frage: Was ist ein Objekt?,
 Antwort:
+- Objekt 
   - Instanz von einer Klasse („new …“)
   - Über Attribute eindeutig beschreibbar 
   - Verfügen über eine Lebensdauer
@@ -84,7 +84,7 @@ Antwort:
 
 Frage: Nenne Objektorientierte Sprachen  
 Antwort:
-- [C++, C#, JAVA, Python, PHP, Perl, Go, Ruby]
+-	[C++, C#, JAVA, Python, PHP, Perl, Go, Ruby]
 
 
 Frage: Was macht ein Compiler?  
@@ -169,12 +169,14 @@ Antwort:
 - Änderungsanomalie
 - Löschanomalie
 - Einfüge Anomalie
+  - Kann mittels der Referentiellen Integrität verhindert werden 
 
 
 Frage: Was ist die Referentielle Integrität?  
 Antwort:
-- Zu jedem Fremdschlüssel muss es immer einen dazugehörenden Primärschlüssel geben 
-- Verhindert Anomalien
+- Referentielle Integrität 
+  - Zu jedem Fremdschlüssel muss es immer einen dazugehörenden Primärschlüssel geben 
+  - Verhindert Anomalien
 
 
 Frage: Was ist/macht ein Debugger?  
@@ -203,25 +205,29 @@ Antwort:
 
 Frage: Was ist ein Modultest?  
 Antwort:
-- Sind die kleinste „Einheit“ bei Softwaretests 
-- Testen auf Korrektheit eines Moduls
+- Modultests 
+  - Sind die kleinste „Einheit“ bei Softwaretests 
+  - Testen auf Korrektheit eines Moduls
 
 
 Frage: Was ist ein Integrationstests?  
-Antwort: 
-- Gruppenkombinierte Tests, keine einzelnen Module 
-- Zusammenspiel verschiedener Module untereinander werden getestet
+Antwort:
+- Integrationstests 
+  - Gruppenkombinierte Tests, keine einzelnen Module 
+  - Zusammenspiel verschiedener Module untereinander werden getestet
 
 
 Frage: Was ist ein Systemtest?  
-Antwort: 
-- Testen von Komponenten in einem ganzen System
+Antwort:
+- Systemtests 
+  - Testen von Komponenten in einem ganzen System
 
  
 Frage: Was ist eine API?  
 Antwort:
-- Application Programming Interface 
-- Schnittstelle zwischen unterschiedlichen Systemen/Programmen 
+- Schnittstellen (API)
+  - Application Programming Interface 
+  - Schnittstelle zwischen unterschiedlichen Systemen/Programmen 
 - Beispiel:
   - Betriebssystem: Verbindung zwischen Hardware und Software 
   - REST-API: Schnittstelle für den Datenaustausch von Datenbank und Client-Anwendung 
@@ -229,9 +235,10 @@ Antwort:
 
 Frage: Welche Design Pattern kennen Sie?  
 Antwort:
-- Erzeugungsmuster (Creational Patterns)
-- Factory 
-- Strukturmuster (Structural Patterns)
-- MVC 
-- Verhaltensmuster (Behavioral Patterns)
-- Observer
+- Design Patterns 
+  - Erzeugungsmuster (Creational Patterns)
+  - Factory 
+  - Strukturmuster (Structural Patterns)
+  - MVC 
+  - Verhaltensmuster (Behavioral Patterns)
+  - Observer
