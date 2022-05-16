@@ -13,7 +13,6 @@
         $content.innerHTML = questions[question].question;
         currentState = STATES.ANSWER;
     }
-
     const displayAnswer = (question) => {
         $content.innerHTML = `<div id="question">${questions[question].question}</div>` + questions[question].answer;
         currentState = STATES.QUESTION;

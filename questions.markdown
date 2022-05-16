@@ -6,6 +6,7 @@ Antwort:
 - Gewisse Komplexität
 - Qualitätsanspruch
 
+
 Frage: Definition Magisches Dreieck (Projekt)  
 Antwort:
 <img src="./images/magisches_dreieck.png"/>
@@ -13,6 +14,7 @@ Antwort:
 - Aufwand
 - Zeit
 - nicht alle 3 Faktoren können gleichzeitig erfüllt werden
+
 
 Frage: Beschreibe Software-Kriterien,
 Antwort: Funktionalität - Umfang der Software\n
@@ -36,6 +38,7 @@ Antwort: Funktionalität - Umfang der Software\n
 - Robustheit
 - Verifizierbarkeit
 - Integrität
+
 
 Frage: Nennen Sie die Säulen der Objekt Orientierung?
 Antwort: 
@@ -63,7 +66,7 @@ Antwort:
   - Nur notwendige Eigenschaften bleiben behalten
 
 
-Frage: Was ist ein Objekt?,
+Frage: Was ist ein Objekt?
 Antwort:
 - Objekt 
   - Instanz von einer Klasse („new …“)
@@ -76,7 +79,7 @@ Antwort:
 - Bauplan für ein Objekt
 
 
-- Frage: Was ist ein Interface (OOP)  
+Frage: Was ist ein Interface (OOP)  
 Antwort:
 - „Vertrag“ zwischen Klassen – Vorgabe für Implementierung von Klassen
 - Verwendung für fehlende Mehrfachvererbung
@@ -84,7 +87,7 @@ Antwort:
 
 Frage: Nenne Objektorientierte Sprachen  
 Antwort:
--	[C++, C#, JAVA, Python, PHP, Perl, Go, Ruby]
+- [C++, C#, JAVA, Python, PHP, Perl, Go, Ruby]
 
 
 Frage: Was macht ein Compiler?  
@@ -192,7 +195,7 @@ Antwort:
   - Code ist bekannt
 - Blackbox 
   - Code ist nicht bekannt 
-  - Verhalten nach Außen wird getestet  Annahme > erwartetes Ergebnis 
+  - Verhalten nach Außen wird getestet -> Annahme > erwartetes Ergebnis 
   - Codeabdeckung 
 - Schreibtisch 
   - Analoger Test zum Verstehen von Algorithmen
