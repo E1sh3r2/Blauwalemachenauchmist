@@ -245,3 +245,7 @@ Antwort:
   - MVC 
   - Verhaltensmuster (Behavioral Patterns)
   - Observer
+
+
+Frage: TEST MICH DU HUNSO?
+Antwort: skjddjflksjfldkf
