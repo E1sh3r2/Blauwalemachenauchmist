@@ -9,7 +9,7 @@ Antwort:
 
 Frage: Definition Magisches Dreieck (Projekt)  
 Antwort:
-<img src="./images/magisches_dreieck.png"/>
+<img src="https://www.factro.de/wp-content/uploads/2020/05/magisches-dreieck-projektmanagement.png">
 - Leistung
 - Aufwand
 - Zeit
