@@ -10,6 +10,7 @@
 ## Markdown Specification
 
 * "-" -> Enumeration
+* "--" -> Nesting enumeration with multiple eunmeration chars (--, ---, ----, ...)
 * "\n" -> Line-Break
 * "**<word>**" -> Bold text 
 
