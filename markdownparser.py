@@ -2,6 +2,7 @@ def main():
     text = ""
     file = open("./questions.markdown", "r")
     text = text.join(file.readlines())
+    print(text)
     file.close()
     paragraphs = text.split("\n\n")
     json = []
