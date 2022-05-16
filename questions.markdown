@@ -66,7 +66,7 @@ Antwort:
   - Nur notwendige Eigenschaften bleiben behalten
 
 
-Frage: Was ist ein Objekt?
+Frage: Was ist ein Objekt?  
 Antwort:
 - Objekt 
   - Instanz von einer Klasse („new …“)
