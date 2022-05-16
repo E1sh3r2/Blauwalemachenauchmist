@@ -6,8 +6,9 @@ Antwort:
 - Gewisse Komplexität
 - Qualitätsanspruch
 
-Frage: Definition Magisches Dreieck (Projekt),
-Antwort: 
+Frage: Definition Magisches Dreieck (Projekt)  
+Antwort:
+<img src="./images/magisches_dreieck.png"/>
 - Leistung
 - Aufwand
 - Zeit
