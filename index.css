@@ -5,4 +5,15 @@ body {
     margin: 0;
     background: #3A3A3A;
     color: white;
+    min-height: 100vh;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    min-width: 500px;
+    border-radius: 50px;
+    border: 1px solid white;
 }
