@@ -195,7 +195,7 @@ Antwort:
   - Code ist bekannt
 - Blackbox 
   - Code ist nicht bekannt 
-  - Verhalten nach Außen wird getestet  Annahme > erwartetes Ergebnis 
+  - Verhalten nach Außen wird getestet -> Annahme > erwartetes Ergebnis 
   - Codeabdeckung 
 - Schreibtisch 
   - Analoger Test zum Verstehen von Algorithmen

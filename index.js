@@ -6,7 +6,7 @@ function selectRandomQuestion() {
 }
 
 function displayQuestion(question) {
-    document.getElementById("content").innerHTML = questions[question].question
+    document.getElementById("content").innerHTML = `<div id="question">${questions[question].question}</div>`
     state = "Answer"
 }
 
