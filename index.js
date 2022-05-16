@@ -4,12 +4,12 @@ let question = ""
 
 function displayQuestion() {
     question = Math.floor(Math.random() * questions.length)
-    document.getElementById("content").innerHTML = questions[question].question
+    document.getElementById("text").innerHTML = questions[question].question
     state = "Answer"
 }
 
 function displayAnswer() {
-    document.getElementById("content").innerHTML = questions[question].answer
+    document.getElementById("text").innerHTML = questions[question].answer
     state = "Question"
 }
 
@@ -21,3 +21,4 @@ function changeText() {
     }
 }
 
+displayQuestion()
