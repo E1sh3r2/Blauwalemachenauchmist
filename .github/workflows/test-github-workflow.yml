@@ -4,7 +4,7 @@ name: test-github-workflow
 on:
   push:
     branches:
-      - feature/test-github-workflow
+      - 'feature/**'
       
 jobs:
   compile:
