@@ -48,7 +48,7 @@ body {
   user-select: none;
 }
 
-#button_action {
+#buttonAction {
   width: 25%;
   position: fixed;
   display: none;
@@ -59,13 +59,13 @@ body {
   align-items: center;
 }
 
-#button_action > svg {
+#buttonAction > svg {
   height: auto;
   width: 50px;
   cursor: pointer;
 }
 
-#keys_help {
+#keysHelp {
   font-size: 15px;
   position: fixed;
   bottom: 0;
