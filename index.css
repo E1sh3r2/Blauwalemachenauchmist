@@ -33,6 +33,7 @@ body {
 }
 
 .content-not-clickable {
+  font-size: 20px;
   padding: 30px;
   display: flex;
   justify-content: center;
