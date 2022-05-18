@@ -1,4 +1,4 @@
-Frage: Definition Projekt
+Frage: Geben Sie eine Definition eines Projektes!
 Antwort: 
 - Einmaliges Vorhaben
 - Fester Start- und Endzeitpunkt
@@ -7,16 +7,16 @@ Antwort:
 - Qualitätsanspruch
 
 
-Frage: Definition Magisches Dreieck (Projekt)  
+Frage: Geben Sie eine Definition Magisches Dreieck bzgl. eines Projekts!  
 Antwort:
 <img src="https://www.factro.de/wp-content/uploads/2020/05/magisches-dreieck-projektmanagement.png">
 - Leistung
 - Aufwand
 - Zeit
-- nicht alle 3 Faktoren können gleichzeitig erfüllt werden
+- Nicht alle 3 Faktoren können gleichzeitig erfüllt werden
 
 
-Frage: Beschreibe Software-Kriterien
+Frage: Beschreibe Sie Software-Kriterien!
 Antwort: 
 - Funktionalität 
   - Umfang der Software\n
@@ -105,13 +105,13 @@ Antwort:
 - Bauplan für ein Objekt
 
 
-Frage: Was ist ein Interface (OOP)  
+Frage: Was ist ein Interface (OOP)?  
 Antwort:
 - „Vertrag“ zwischen Klassen – Vorgabe für Implementierung von Klassen
 - Verwendung für fehlende Mehrfachvererbung
 
 
-Frage: Nenne Objektorientierte Sprachen  
+Frage: Nennen Sie Objektorientierte Sprachen!  
 Antwort:
 - [C++, C#, JAVA, Python, PHP, Perl, Go, Ruby]
 
@@ -141,7 +141,7 @@ Antwort:
   - Fehler treten erst zur Laufzeit auf
 
 
-Frage: Nennen Sie Vorgehensmodelle  
+Frage: Nennen Sie Vorgehensmodelle!  
 Antwort:
 - Wasserfallmodell
 - V-Modell
@@ -302,9 +302,9 @@ Antwort:
 Frage: Welche Testverfahren kennen Sie?  
 Antwort:
 - Whitebox 
-  - Code ist bekannt
+  - Code und Struktur ist bekannt
 - Blackbox 
-  - Code ist nicht bekannt 
+  - Code und Struktur ist unbekannt
   - Verhalten nach Außen wird getestet -> Annahme > erwartetes Ergebnis 
   - Codeabdeckung 
 - Schreibtisch 
