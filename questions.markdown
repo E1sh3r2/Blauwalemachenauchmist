@@ -1,4 +1,4 @@
-Frage: Definition Projekt
+Frage: Geben Sie eine Definition eines Projektes!
 Antwort: 
 - Einmaliges Vorhaben
 - Fester Start- und Endzeitpunkt
@@ -7,17 +7,19 @@ Antwort:
 - Qualitätsanspruch
 
 
-Frage: Definition Magisches Dreieck (Projekt)  
+Frage: Geben Sie eine Definition Magisches Dreieck bzgl. eines Projekts!  
 Antwort:
 <img src="https://www.factro.de/wp-content/uploads/2020/05/magisches-dreieck-projektmanagement.png">
 - Leistung
 - Aufwand
 - Zeit
-- nicht alle 3 Faktoren können gleichzeitig erfüllt werden
+- Nicht alle 3 Faktoren können gleichzeitig erfüllt werden
 
 
-Frage: Beschreibe Software-Kriterien,
-Antwort: Funktionalität - Umfang der Software\n
+Frage: Beschreibe Sie Software-Kriterien!
+Antwort: 
+- Funktionalität 
+  - Umfang der Software\n
 - Zuverlässigkeit
   - Identische Funktionalität 
   - Über lange Zeiträume
@@ -43,6 +45,14 @@ Antwort: Funktionalität - Umfang der Software\n
 Frage: Nennen Sie die Säulen der Objekt Orientierung?
 Antwort: 
 - Verkapselung:
+- Vererbung:
+- Polymorphie (Vielgestaltigkeit):
+- Abstraktion:
+
+
+Frage: Beschreiben Sie Verkapselung (OOP)?
+Antwort: 
+- Verkapselung:
   - Auf Methoden und Variablen können unterschiedlich zugegriffen werden
     - Private
       - nur innerhalb in der Klasse, nicht vererbbar 
@@ -52,14 +62,30 @@ Antwort:
       - innerhalb des gleichen Pakets 
     - Protected
       - für Klassen und Unterklassen (vererbte Klassen) sichtbar
+
+
+Frage: Beschreiben Sie Vererbung (OOP)?  
+Antwort:
 - Vererbung:
   - Unterklassen erben Methoden und Verhalten von Oberklassen
   - Unterklassen können Methoden von der Oberklasse überschreiben 
   - Generalisierung, Spezialisierung 
+
+
+Frage: Beschreiben Sie Polymorphie (OOP)?  
+Antwort:
 - Polymorphie (Vielgestaltigkeit):
   - Poly = viele, morph = Form 
   - Implementierung von Oberklassen Methoden
   - Methoden können überschrieben werden
+- Abstraktion:
+  - Die anderen Säulen sind eine Form der Abstraktion 
+  - Bei der Modellierung werden bewusst bestimmte Eigenschaften „verborgen“ 
+  - Nur notwendige Eigenschaften bleiben behalten
+
+
+Frage: Beschreiben Sie Abstraktion (OOP)?  
+Antwort:
 - Abstraktion:
   - Die anderen Säulen sind eine Form der Abstraktion 
   - Bei der Modellierung werden bewusst bestimmte Eigenschaften „verborgen“ 
@@ -79,13 +105,13 @@ Antwort:
 - Bauplan für ein Objekt
 
 
-Frage: Was ist ein Interface (OOP)  
+Frage: Was ist ein Interface (OOP)?  
 Antwort:
 - „Vertrag“ zwischen Klassen – Vorgabe für Implementierung von Klassen
 - Verwendung für fehlende Mehrfachvererbung
 
 
-Frage: Nenne Objektorientierte Sprachen  
+Frage: Nennen Sie Objektorientierte Sprachen!  
 Antwort:
 - [C++, C#, JAVA, Python, PHP, Perl, Go, Ruby]
 
@@ -115,13 +141,99 @@ Antwort:
   - Fehler treten erst zur Laufzeit auf
 
 
-Frage: Nenne 3 Vorgehensmodelle  
+Frage: Nennen Sie Vorgehensmodelle!  
 Antwort:
 - Wasserfallmodell
 - V-Modell
 - Spiralmodell
 - Scrum
 
+
+Frage: Was ist das Wasserfallmodell?
+Antwort:
+- lineares Vorgehensmodell
+- jede Phase nur einmal durchlaufen
+  - keine Rücksprünge
+- fest definierte Phasen
+- Vorteile
+  - Einfache Struktur & feste Phasen
+  - Gute Dokumentation
+  - abschätzung von Kosten und Aufwand
+- Nachteile
+  - ungeeignet für komplexe Projekte
+  - keine Anpassung während des Projektablaufs
+  - Endanwender wird erst nach der Entwicklung einbezogen
+  - Fehler werden ggf. erst am Ende erkannt
+<img src="https://www.ionos.de/digitalguide/fileadmin/DigitalGuide/Screenshots_2018/wasserfallmodell.png">
+
+
+Frage: Was ist das V-Modell?  
+Antwort:
+- lineares Vorgehensmodell
+- fest definierte Phasen
+- Testphasen für jede Entwicklungsphase
+- Vorteile
+  - frühe Tests erkennt unvollständige Spezifikationen
+  - einfacher aufbau
+  - vergleichsweise wenig Kommunikation während der Entwicklung
+  - Hohe Testabdeckung
+- Nachteile
+  - ausführliche Dokumentation
+  - starr und wenig flexibel
+    <img src="https://projekte-leicht-gemacht.de/wp-content/uploads/2021/08/v-modell.jpg">
+
+
+Frage: Was ist das Spiralmodell?
+- iteratives Vorgehensmodell
+- Sektoren nicht unbedingt in jeder Umrundung notwendig
+- Risiko-orientiertes Modell
+- von innen nach außen durchlaufen
+  Antwort:
+- Vorteile
+  - flexibles, generisches Modell
+  - frühe Einbindung von Auftraggeber
+  - maximale Kontrolle über Kosten, Ressourcen
+- Nachteile
+  - hoher Managementaufwand
+  - verzögerungen durch regelmäßige Entscheidungen
+  - Know-how in Risikoanalyse erforderlich
+  - ungeeignet für kleine Projekte
+    <img src="https://www.ionos.de/startupguide/fileadmin/StartupGuide/Screenshots_2019/spiralmodell-DE-1.png">
+
+
+Frage: Was ist das SCRUM?  
+Antwort:
+- agiles Vorgehensmodell
+- zwei- bis vierwöchige Sprints
+  - Planing
+    - Planung des nächsten Tasks
+    - festlegen der Tasks - Sprint Backlog
+  - Dailys
+    - Austausch des aktuellen Stands
+    - täglich 15 min
+    - Stand-up-Meeting
+  - Review
+    - Präsentation des (Teil)Produktes 
+    - überprüfung der Ergebnisse
+    - anpassung Anforderungen
+  - Retroperspektive
+    - verbesserung des Sprints
+    - Probleme erkennen
+    - Zusammenarbeit verbessern
+- Rollen
+  - Product Owner
+    - Kommunikation mit Kunden
+    - Verantwortlich für
+      - Auslieferung
+      - Kosten
+      - Eigenschaften des Produktes
+  - Team
+    - Entwickeln das Produkt
+    - organisiert sich selbst
+  - Scrum Master
+    - erhält Scrum vorgehen
+    - regelt Kommunikationsprobleme
+  
 
 Frage: Wie wird normalisiert?  
 Antwort:
@@ -172,12 +284,10 @@ Antwort:
 - Änderungsanomalie
 - Löschanomalie
 - Einfüge Anomalie
-  - Kann mittels der Referentiellen Integrität verhindert werden 
 
 
 Frage: Was ist die Referentielle Integrität?  
 Antwort:
-- Referentielle Integrität 
   - Zu jedem Fremdschlüssel muss es immer einen dazugehörenden Primärschlüssel geben 
   - Verhindert Anomalien
 
@@ -192,9 +302,9 @@ Antwort:
 Frage: Welche Testverfahren kennen Sie?  
 Antwort:
 - Whitebox 
-  - Code ist bekannt
+  - Code und Struktur ist bekannt
 - Blackbox 
-  - Code ist nicht bekannt 
+  - Code und Struktur ist unbekannt
   - Verhalten nach Außen wird getestet -> Annahme > erwartetes Ergebnis 
   - Codeabdeckung 
 - Schreibtisch 
@@ -208,27 +318,23 @@ Antwort:
 
 Frage: Was ist ein Modultest?  
 Antwort:
-- Modultests 
   - Sind die kleinste „Einheit“ bei Softwaretests 
   - Testen auf Korrektheit eines Moduls
 
 
 Frage: Was ist ein Integrationstests?  
 Antwort:
-- Integrationstests 
   - Gruppenkombinierte Tests, keine einzelnen Module 
   - Zusammenspiel verschiedener Module untereinander werden getestet
 
 
 Frage: Was ist ein Systemtest?  
 Antwort:
-- Systemtests 
   - Testen von Komponenten in einem ganzen System
 
  
 Frage: Was ist eine API?  
 Antwort:
-- Schnittstellen (API)
   - Application Programming Interface 
   - Schnittstelle zwischen unterschiedlichen Systemen/Programmen 
 - Beispiel:
@@ -236,16 +342,11 @@ Antwort:
   - REST-API: Schnittstelle für den Datenaustausch von Datenbank und Client-Anwendung 
 
 
-Frage: Welche Design Pattern kennen Sie?  
+Frage: Welches Design Pattern kennen Sie?  
 Antwort:
-- Design Patterns 
   - Erzeugungsmuster (Creational Patterns)
   - Factory 
   - Strukturmuster (Structural Patterns)
   - MVC 
   - Verhaltensmuster (Behavioral Patterns)
   - Observer
-
-
-Frage: TEST MICH DU HUNSO?
-Antwort: skjddjflksjfldkf

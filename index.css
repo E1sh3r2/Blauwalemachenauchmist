@@ -8,7 +8,7 @@ body {
   min-height: 100vh;
 }
 
-#content {
+.content {
   padding: 30px;
   display: flex;
   justify-content: center;
@@ -24,15 +24,47 @@ body {
   user-select: none;
 }
 
-#content:hover {
+.content:hover {
   background: #4a4a4a;
 }
 
-#content:active {
+.content:active {
   transform: translate(1px, 2px);
 }
 
-#keys_help {
+.content-not-clickable {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 300px;
+  min-width: 500px;
+  max-width: 70%;
+  border-radius: 50px;
+  border: 2px solid white;
+  box-shadow: 1px 2px #999;
+  user-select: none;
+}
+
+#buttonAction {
+  width: 25%;
+  position: fixed;
+  display: none;
+  flex-direction: row;
+  bottom: 50px;
+  align-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#buttonAction > svg {
+  height: auto;
+  width: 50px;
+  cursor: pointer;
+}
+
+#keysHelp {
   font-size: 15px;
   position: fixed;
   bottom: 0;
@@ -41,6 +73,14 @@ body {
 
 #question {
   font-size: 25px;
+}
+
+.thumbsDown {
+  color: red;
+}
+
+.thumbsUp {
+  color: green;
 }
 
 @media only screen and (max-width: 600px) {
