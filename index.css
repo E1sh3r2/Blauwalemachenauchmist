@@ -9,6 +9,7 @@ body {
 }
 
 .content {
+  position: relative;
   padding: 30px;
   display: flex;
   justify-content: center;
@@ -33,6 +34,7 @@ body {
 }
 
 .content-not-clickable {
+  position: relative;
   font-size: 20px;
   padding: 30px;
   display: flex;
@@ -48,7 +50,49 @@ body {
   user-select: none;
 }
 
-#buttonAction {
+#answer_right {
+  background-color: green;
+  opacity: 0.0;
+  left:0;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 300px;
+  min-width: 250px;
+  max-width: 100%;
+  border-radius: 50px 0px 0px 50px;
+  user-select: none;
+  cursor: pointer;
+}
+
+#answer_right:hover {
+  opacity: 0.5;
+}
+
+#answer_wrong {
+  background-color: red;
+  opacity: 0.0;
+  right: 0;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 300px;
+  min-width: 250px;
+  max-width: 100%;
+  border-radius: 0px 50px 50px 0px;
+  user-select: none;
+  cursor: pointer;
+}
+
+#answer_wrong:hover {
+  opacity: 0.5;
+}
+
+#button_action {
   width: 25%;
   position: fixed;
   display: none;

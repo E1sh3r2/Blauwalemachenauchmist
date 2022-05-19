@@ -1,10 +1,10 @@
 (() => {
     const STATES = { ANSWER: "answer", QUESTION: "question" }
+    const ANSWER = { RIGHT: "right", WRONG: "wrong" }
     const $content = document.getElementById("content");
-    const $thumbsGroup = document.getElementById("buttonAction");
-    const $thumbsUp = document.getElementById("thumbsUp");
-    const $thumbsDown = document.getElementById("thumbsDown");
     const $question = document.getElementById("question");
+    const $answer_wrong = document.getElementById("answer_wrong");
+    const $answer_right = document.getElementById("answer_right");
 
     let currentState = STATES.QUESTION;
     let currentQuestion = "";
@@ -14,18 +14,18 @@
     }
 
     const displayQuestion = (question) => {
-        removeEventListenerThumbs()
-        addEventListenerContent()
-        $thumbsGroup.style.display = "none"
+        $answer_wrong.style.display = "none"
+        $answer_right.style.display = "none"
         $content.classList.remove("content-not-clickable")
         $content.classList.add("content")
         $question.innerHTML = questions[question].question
         currentState = STATES.ANSWER;
+        addEventListenerContent()
     }
+
     const displayAnswer = (question) => {
-        removeEventListenerContent()
-        addEventListenerThumbs()
-        $thumbsGroup.style.display = "flex"
+        $answer_wrong.style.display = "flex"
+        $answer_right.style.display = "flex"
         $content.classList.add("content-not-clickable")
         $content.classList.remove("content")
         $question.innerHTML = questions[question].question + questions[question].answer;
@@ -52,38 +52,35 @@
         }
     }
 
-    const givenAnswer = () => {
-        /**
-         * Hier code für Cookies dies das
-         */
-        changeText()
-    }
-
-    const addEventListenerContent = () => {
-        $content.addEventListener("click", changeText)
-    }
-
-    const removeEventListenerContent = () => {
-        $content.removeEventListener("click", changeText)
-    }
-
-    const addEventListenerThumbs = () => {
-        $thumbsDown.addEventListener("click", givenAnswer)
-        $thumbsUp.addEventListener("click", givenAnswer)
-    }
-
-    const removeEventListenerThumbs = () => {
-        $thumbsDown.removeEventListener("click", givenAnswer)
-        $thumbsUp.removeEventListener("click", givenAnswer)
-    }
-
-    document.addEventListener("keyup", (event) => {
-        if (event.code === "Space") {
-            changeText();
+    function givenAnswer(answer){
+        return function (){
+            /**
+             * Hier code für Cookies dies das
+             */
+            console.log(answer)
+            changeText()
         }
-    });
+    }
+
+    const positioning_answer_boxes = () =>{
+        $answer_wrong.style.height = `${$content.clientHeight}px`
+        $answer_wrong.style.width = `${$content.clientWidth/2}px`
+        $answer_wrong.style.left = `${$content.getBoundingClientRect().left + $answer_wrong.clientWidth}px`
+        $answer_right.style.height = `${$content.clientHeight}px`
+        $answer_right.style.width = `${$content.clientWidth/2}px`
+        $answer_right.style.left = `${$content.getBoundingClientRect().left}px`
+    }
+
+    const addEventListenerContent = () =>{
+        $content.addEventListener("click", changeText, {once: true})
+    }
+
+    const addEventListenerAnswer = () =>{
+        $answer_wrong.addEventListener("click", givenAnswer(ANSWER.WRONG))
+        $answer_right.addEventListener("click", givenAnswer(ANSWER.RIGHT))
+    }
 
     selectRandomQuestion();
     displayQuestion(currentQuestion);
-
+    addEventListenerAnswer()
 })()
