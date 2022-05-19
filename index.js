@@ -4,6 +4,7 @@
     const $thumbsGroup = document.getElementById("buttonAction");
     const $thumbsUp = document.getElementById("thumbsUp");
     const $thumbsDown = document.getElementById("thumbsDown");
+    const $question = document.getElementById("question");
 
     let currentState = STATES.QUESTION;
     let currentQuestion = "";
@@ -18,7 +19,7 @@
         $thumbsGroup.style.display = "none"
         $content.classList.remove("content-not-clickable")
         $content.classList.add("content")
-        $content.innerHTML = `<div id="question">${questions[question].question}</div>`
+        $question.innerHTML = questions[question].question
         currentState = STATES.ANSWER;
     }
     const displayAnswer = (question) => {
@@ -27,8 +28,19 @@
         $thumbsGroup.style.display = "flex"
         $content.classList.add("content-not-clickable")
         $content.classList.remove("content")
-        $content.innerHTML = `<div id="question">${questions[question].question}</div>` + questions[question].answer;
+        $question.innerHTML = questions[question].question + questions[question].answer;
         currentState = STATES.QUESTION;
+        fittingBoxOnImg()
+        positioning_answer_boxes()
+    }
+
+    const fittingBoxOnImg = () =>{
+        let $images = $question.getElementsByTagName("img");
+        for (const image of $images){
+            image.addEventListener('load', (event) => {
+                positioning_answer_boxes()
+            })
+        }
     }
 
     const changeText = () => {
