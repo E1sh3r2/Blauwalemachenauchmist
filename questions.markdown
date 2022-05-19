@@ -183,7 +183,8 @@ Antwort:
     <img src="https://projekte-leicht-gemacht.de/wp-content/uploads/2021/08/v-modell.jpg">
 
 
-Frage: Was ist das Spiralmodell?
+Frage: Was ist das Spiralmodell?  
+Antwort:
 - iteratives Vorgehensmodell
 - Sektoren nicht unbedingt in jeder Umrundung notwendig
 - Risiko-orientiertes Modell
@@ -288,8 +289,8 @@ Antwort:
 
 Frage: Was ist die Referentielle Integrität?  
 Antwort:
-  - Zu jedem Fremdschlüssel muss es immer einen dazugehörenden Primärschlüssel geben 
-  - Verhindert Anomalien
+- Zu jedem Fremdschlüssel muss es immer einen dazugehörenden Primärschlüssel geben 
+- Verhindert Anomalien
 
 
 Frage: Was ist/macht ein Debugger?  
@@ -318,25 +319,25 @@ Antwort:
 
 Frage: Was ist ein Modultest?  
 Antwort:
-  - Sind die kleinste „Einheit“ bei Softwaretests 
-  - Testen auf Korrektheit eines Moduls
+- Sind die kleinste „Einheit“ bei Softwaretests 
+- Testen auf Korrektheit eines Moduls
 
 
 Frage: Was ist ein Integrationstests?  
 Antwort:
-  - Gruppenkombinierte Tests, keine einzelnen Module 
-  - Zusammenspiel verschiedener Module untereinander werden getestet
+- Gruppenkombinierte Tests, keine einzelnen Module 
+- Zusammenspiel verschiedener Module untereinander werden getestet
 
 
 Frage: Was ist ein Systemtest?  
 Antwort:
-  - Testen von Komponenten in einem ganzen System
+- Testen von Komponenten in einem ganzen System
 
  
 Frage: Was ist eine API?  
 Antwort:
-  - Application Programming Interface 
-  - Schnittstelle zwischen unterschiedlichen Systemen/Programmen 
+- Application Programming Interface 
+- Schnittstelle zwischen unterschiedlichen Systemen/Programmen 
 - Beispiel:
   - Betriebssystem: Verbindung zwischen Hardware und Software 
   - REST-API: Schnittstelle für den Datenaustausch von Datenbank und Client-Anwendung 
@@ -344,9 +345,9 @@ Antwort:
 
 Frage: Welches Design Pattern kennen Sie?  
 Antwort:
-  - Erzeugungsmuster (Creational Patterns)
-  - Factory 
-  - Strukturmuster (Structural Patterns)
-  - MVC 
-  - Verhaltensmuster (Behavioral Patterns)
-  - Observer
+- Erzeugungsmuster (Creational Patterns)
+- Factory 
+- Strukturmuster (Structural Patterns)
+- MVC 
+- Verhaltensmuster (Behavioral Patterns)
+- Observer
