@@ -55,10 +55,10 @@
     };
 
     /**
-     * Retrieves all answers as questionId-decision map from cookies (localStorage)
-     * @returns answers from cookie storage (localStorage) if cookies are available. Returns empty object if cookies are not available
+     * Retrieves all answers as questionId-decision map from local storage
+     * @returns answers from local storage. Returns empty object if local storage are not available
      */
-    const retrieveStatsFromCookies = () => {
+    const retrieveStatsFromLocalStorage = () => {
         if ("localStorage" in window) {
             const statsStr = window.localStorage.getItem(COOKIE_KEY_STATS);
 
@@ -66,18 +66,18 @@
                 const stats = JSON.parse(statsStr);
                 return stats;
             }
-        } else console.warning("Cookies (localStorage) are not available");
+        } else console.warning("local storage is not available");
 
         return { answers: {} };
     };
 
     /**
-     * Save answer of question to cookies (localStorage)
+     * Save answer of question to local storage
      * @param {number} id question id
      * @param {ANSWER} decision answer to question
      */
-    const saveAnswerToCookies = (id, decision) => {
-        const stats = retrieveStatsFromCookies();
+    const saveAnswerToLocalStorage = (id, decision) => {
+        const stats = retrieveStatsFromLocalStorage();
 
         // increment count of answer
         if (typeof stats["answers"][id] !== "undefined") {
@@ -94,11 +94,11 @@
                 COOKIE_KEY_STATS,
                 JSON.stringify(stats)
             );
-        } else console.warning("Cookies (localStorage) are not available");
+        } else console.warning("local storage is not available");
     };
 
     const givenAnswer = (answer) => () => {
-        saveAnswerToCookies(currentQuestion, answer);
+        saveAnswerToLocalStorage(currentQuestion, answer);
         changeText();
     };
 
@@ -125,6 +125,4 @@
     selectRandomQuestion();
     displayQuestion(currentQuestion);
     addEventListenerAnswer();
-
-    console.log(retrieveStatsFromCookies());
 })();
