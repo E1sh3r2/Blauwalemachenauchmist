@@ -1,14 +1,14 @@
 const questions = [{
   'id': 0,
-  'question': 'Definition Projekt<br>',
+  'question': 'Geben Sie eine Definition eines Projektes!<br>',
   'answer': ' <br>&bull; Einmaliges Vorhaben<br>&bull; Fester Start&bull; und Endzeitpunkt<br>&bull; Begrenzte Ressourcen (Zeit, Personal, Budget)<br>&bull; Gewisse Komplexität<br>&bull; Qualitätsanspruch'
 }, {
   'id': 1,
-  'question': '<br>Definition Magisches Dreieck (Projekt)  <br>',
-  'answer': '<br><img src="https://www.factro.de/wp-content/uploads/2020/05/magisches-dreieck-projektmanagement.png"><br>&bull; Leistung<br>&bull; Aufwand<br>&bull; Zeit<br>&bull; nicht alle 3 Faktoren können gleichzeitig erfüllt werden'
+  'question': '<br>Geben Sie eine Definition Magisches Dreieck bzgl. eines Projekts!  <br>',
+  'answer': '<br><img src="https://www.factro.de/wp-content/uploads/2020/05/magisches-dreieck-projektmanagement.png"><br>&bull; Leistung<br>&bull; Aufwand<br>&bull; Zeit<br>&bull; Nicht alle 3 Faktoren können gleichzeitig erfüllt werden'
 }, {
   'id': 2,
-  'question': '<br>Beschreibe Software-Kriterien<br>',
+  'question': '<br>Beschreibe Sie Software-Kriterien!<br>',
   'answer': ' <br>&bull; Funktionalität <br>&emsp;&bull; Umfang der Software\\n<br>&bull; Zuverlässigkeit<br>&emsp;&bull; Identische Funktionalität <br>&emsp;&bull; Über lange Zeiträume<br>&bull; Benutzbarkeit <br>&emsp;&bull; Usability <br>&emsp;&bull; Software einfach zu nutzen <br>&emsp;&bull; Intuitive Anwendung<br>&bull; Effizienz <br>&emsp;&bull; Software benötigt wenig Ressourcen <br>&emsp;&bull; Hohe Lauffähigkeit und Arbeitsleistung<br>&bull; Änderbarkeit <br>&emsp;&bull; Modularer und klar strukturierte Software<br>&emsp;&bull; Einfache Erweiterung der Software<br>&bull; Übertragbarkeit <br>&emsp;&bull; Übertragbarkeit auf andere Betriebssysteme <br>&emsp;&bull; Responsive <br>&bull; Portabilität<br>&bull; Robustheit<br>&bull; Verifizierbarkeit<br>&bull; Integrität'
 }, {
   'id': 3,
@@ -40,11 +40,11 @@ const questions = [{
   'answer': '<br>&bull; Bauplan für ein Objekt'
 }, {
   'id': 10,
-  'question': '<br>Was ist ein Interface (OOP)  <br>',
+  'question': '<br>Was ist ein Interface (OOP)?  <br>',
   'answer': '<br>&bull; „Vertrag“ zwischen Klassen – Vorgabe für Implementierung von Klassen<br>&bull; Verwendung für fehlende Mehrfachvererbung'
 }, {
   'id': 11,
-  'question': '<br>Nenne Objektorientierte Sprachen  <br>',
+  'question': '<br>Nennen Sie Objektorientierte Sprachen!  <br>',
   'answer': '<br>&bull; [C++, C#, JAVA, Python, PHP, Perl, Go, Ruby]'
 }, {
   'id': 12,
@@ -56,7 +56,7 @@ const questions = [{
   'answer': '<br>&bull; Interpretiert/(führt) Anweisungen zur Laufzeit (aus)<br>&bull; Sequenziell (Zeile für Zeile)<br>&bull; Fehler werden erst zur Laufzeit erkannt<br>&bull; Vorteil:<br>&emsp;&bull; Portabilität (Unabhängig vom OS)<br>&emsp;&bull; Einfachere Fehlersuche aufgrund von Line-By-Line-Execution<br>&bull; Nachteile:<br>&emsp;&bull; Langsamer als kompilierte Programme, aufgrund der Analyse (Lexikalische, Syntaktisch) zur Laufzeit<br>&emsp;&bull; Fehler treten erst zur Laufzeit auf'
 }, {
   'id': 14,
-  'question': '<br>Nennen Sie Vorgehensmodelle  <br>',
+  'question': '<br>Nennen Sie Vorgehensmodelle!  <br>',
   'answer': '<br>&bull; Wasserfallmodell<br>&bull; V-Modell<br>&bull; Spiralmodell<br>&bull; Scrum'
 }, {
   'id': 15,
@@ -68,8 +68,8 @@ const questions = [{
   'answer': '<br>&bull; lineares Vorgehensmodell<br>&bull; fest definierte Phasen<br>&bull; Testphasen für jede Entwicklungsphase<br>&bull; Vorteile<br>&emsp;&bull; frühe Tests erkennt unvollständige Spezifikationen<br>&emsp;&bull; einfacher aufbau<br>&emsp;&bull; vergleichsweise wenig Kommunikation während der Entwicklung<br>&emsp;&bull; Hohe Testabdeckung<br>&bull; Nachteile<br>&emsp;&bull; ausführliche Dokumentation<br>&emsp;&bull; starr und wenig flexibel<br>    <img src="https://projekte-leicht-gemacht.de/wp-content/uploads/2021/08/v-modell.jpg">'
 }, {
   'id': 17,
-  'question': '<br>Was ist das Spiralmodell?<br>&bull; iteratives Vorgehensmodell<br>&bull; Sektoren nicht unbedingt in jeder Umrundung notwendig<br>&bull; Risiko-orientiertes Modell<br>&bull; von innen nach außen durchlaufen<br>  ',
-  'answer': '<br>&bull; Vorteile<br>&emsp;&bull; flexibles, generisches Modell<br>&emsp;&bull; frühe Einbindung von Auftraggeber<br>&emsp;&bull; maximale Kontrolle über Kosten, Ressourcen<br>&bull; Nachteile<br>&emsp;&bull; hoher Managementaufwand<br>&emsp;&bull; verzögerungen durch regelmäßige Entscheidungen<br>&emsp;&bull; Know-how in Risikoanalyse erforderlich<br>&emsp;&bull; ungeeignet für kleine Projekte<br>    <img src="https://www.ionos.de/startupguide/fileadmin/StartupGuide/Screenshots_2019/spiralmodell-DE-1.png">'
+  'question': '<br>Was ist das Spiralmodell?  <br>',
+  'answer': '<br>&bull; iteratives Vorgehensmodell<br>&bull; Sektoren nicht unbedingt in jeder Umrundung notwendig<br>&bull; Risiko-orientiertes Modell<br>&bull; von innen nach außen durchlaufen<br>  '
 }, {
   'id': 18,
   'question': '<br>Was ist das SCRUM?  <br>',
@@ -113,7 +113,7 @@ const questions = [{
 }, {
   'id': 28,
   'question': '<br>Welche Testverfahren kennen Sie?  <br>',
-  'answer': '<br>&bull; Whitebox <br>&emsp;&bull; Code ist bekannt<br>&bull; Blackbox <br>&emsp;&bull; Code ist nicht bekannt <br>&emsp;&bull; Verhalten nach Außen wird getestet &rarr; Annahme > erwartetes Ergebnis <br>&emsp;&bull; Codeabdeckung <br>&bull; Schreibtisch <br>&emsp;&bull; Analoger Test zum Verstehen von Algorithmen<br>  '
+  'answer': '<br>&bull; Whitebox <br>&emsp;&bull; Code und Struktur ist bekannt<br>&bull; Blackbox <br>&emsp;&bull; Code und Struktur ist unbekannt<br>&emsp;&bull; Verhalten nach Außen wird getestet &rarr; Annahme > erwartetes Ergebnis <br>&emsp;&bull; Codeabdeckung <br>&bull; Schreibtisch <br>&emsp;&bull; Analoger Test zum Verstehen von Algorithmen<br>  '
 }, {
   'id': 29,
   'question': 'Welche Softwaretests kennen Sie?  <br>',
