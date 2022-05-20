@@ -103,13 +103,14 @@
     };
 
     const positioning_answer_boxes = () => {
+        let clientWidth = $content.clientWidth / 2
         $answer_wrong.style.height = `${$content.clientHeight}px`;
-        $answer_wrong.style.width = `${$content.clientWidth / 2}px`;
+        $answer_wrong.style.width = `${clientWidth}px`;
         $answer_wrong.style.left = `${
-            $content.getBoundingClientRect().left + $answer_wrong.clientWidth
+            $content.getBoundingClientRect().left + clientWidth
         }px`;
         $answer_right.style.height = `${$content.clientHeight}px`;
-        $answer_right.style.width = `${$content.clientWidth / 2}px`;
+        $answer_right.style.width = `${clientWidth}px`;
         $answer_right.style.left = `${$content.getBoundingClientRect().left}px`;
     };
 

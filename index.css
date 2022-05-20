@@ -60,7 +60,6 @@ body {
   align-items: center;
   flex-direction: column;
   min-height: 300px;
-  min-width: 250px;
   max-width: 100%;
   border-radius: 50px 0px 0px 50px;
   user-select: none;
@@ -81,7 +80,6 @@ body {
   align-items: center;
   flex-direction: column;
   min-height: 300px;
-  min-width: 250px;
   max-width: 100%;
   border-radius: 0px 50px 50px 0px;
   user-select: none;
@@ -117,7 +115,7 @@ body {
 }
 
 #question {
-  font-size: 25px;
+  font-size: 3vw;
 }
 
 #question > img {
@@ -139,8 +137,15 @@ body {
 
 @media only screen and (max-width: 600px) {
   #content {
-    max-width: 100%;
+    width: 100%;
     border-radius: 0;
     border: 0;
+    min-width: 0px;
+  }
+  #question {
+    font-size: 5vw;
+  }
+  #answer_wrong, #answer_right {
+    opacity: 0.2;
   }
 }
