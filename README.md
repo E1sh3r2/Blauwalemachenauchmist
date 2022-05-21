@@ -4,8 +4,9 @@
 
 - [x] Init repo
 - [x] Publish repo
-- [ ] Custom Markdown interpreter
-- [ ] CSS-Styling
+- [x] CSS-Styling
+- [ ] Algorithm to display new question
+- [ ] add question id to url
 
 ## Used Software
 * [Markdown-It](https://github.com/markdown-it/markdown-it) to display questions (Markdown) as HTMTL
