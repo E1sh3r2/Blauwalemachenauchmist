@@ -7,12 +7,8 @@
 - [ ] Custom Markdown interpreter
 - [ ] CSS-Styling
 
-## Markdown Specification
-
-* "-" -> Enumeration
-* "--" -> Nesting enumeration with multiple enumeration characters (--, ---, ----, ...)
-* "\n" -> Line-Break
-* "**<word>**" -> Bold text 
+## Used Software
+* [Markdown-It](https://github.com/markdown-it/markdown-it) to display questions (Markdown) as HTMTL
 
 
 ## License
