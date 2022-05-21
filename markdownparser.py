@@ -1,36 +1,26 @@
 def main():
-    text = ""
-    file = open("./questions.markdown", "r")
-    text = text.join(file.readlines())
-    file.close()
-    paragraphs = text.split("\n\n")
-    json = []
+    content = ""
+    with open("./questions.markdown", "r", encoding="utf-8") as file:
+        content = content.join(file.readlines())
+
+    paragraphs = content.split("\n\n")
+    json_objects = []
     for question_id, paragraph in enumerate(paragraphs):
         paragraph = paragraph.replace("Frage: ", "")
-        parts = paragraph.split("Antwort:")
-        for index, part in enumerate(parts):
-            part = part.replace("\n", "<br>")
-            part = part.replace("      - ", "&emsp;&emsp;&emsp;&bull; ")
-            part = part.replace("    - ", "&emsp;&emsp;&bull; ")
-            part = part.replace("  - ", "&emsp;&bull; ")
-            part = part.replace("- ", "&bull; ")
-            part = part.replace("->", "&rarr;")
-            fragments = part.split("**")
-            for fragment_nr, fragment in enumerate(fragments):
-                if len(fragments) == fragment_nr + 1:
-                    continue
-                if fragment_nr % 2 == 0:
-                    part += fragment + "<strong>"
-                else:
-                    part += fragment + "</strong>"
-            parts[index] = part
-        part = {"id": question_id, "question": parts[0], "answer": parts[1]}
-        json.append(part)
-    json = str(json)
-    json = "const questions = " + json
-    file = open("questions.js", "w")
-    file.write(json)
-    file.close()
+        [question, answer] = paragraph.split("Antwort:")
+
+        question = question.replace("\n", "")
+        json_object = {
+            "id": question_id,
+            "question": f"<h1>{question}</h1>",
+            "answer": answer
+        }
+        json_objects.append(json_object)
+
+    js_object = "const questions = " + str(json_objects)
+
+    with open("questions.js", "w", encoding="utf-8") as file:
+        file.write(js_object)
 
 
 if __name__ == '__main__':
