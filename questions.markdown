@@ -9,7 +9,7 @@ Antwort:
 
 Frage: Geben Sie eine Definition Magisches Dreieck bzgl. eines Projekts!  
 Antwort:
-<img src="https://www.factro.de/wp-content/uploads/2020/05/magisches-dreieck-projektmanagement.png">
+![Magisches Dreieck](https://www.factro.de/wp-content/uploads/2020/05/magisches-dreieck-projektmanagement.png)
 - Leistung
 - Aufwand
 - Zeit
@@ -18,8 +18,8 @@ Antwort:
 
 Frage: Beschreibe Sie Software-Kriterien!
 Antwort: 
-- Funktionalität 
-  - Umfang der Software\n
+- Funktionalität
+  - Umfang der Software
 - Zuverlässigkeit
   - Identische Funktionalität 
   - Über lange Zeiträume
@@ -151,6 +151,7 @@ Antwort:
 
 Frage: Was ist das Wasserfallmodell?
 Antwort:
+![Wasserfallmodell](https://www.ionos.de/digitalguide/fileadmin/DigitalGuide/Screenshots_2018/wasserfallmodell.png)
 - lineares Vorgehensmodell
 - jede Phase nur einmal durchlaufen
   - keine Rücksprünge
@@ -164,11 +165,11 @@ Antwort:
   - keine Anpassung während des Projektablaufs
   - Endanwender wird erst nach der Entwicklung einbezogen
   - Fehler werden ggf. erst am Ende erkannt
-<img src="https://www.ionos.de/digitalguide/fileadmin/DigitalGuide/Screenshots_2018/wasserfallmodell.png">
 
 
 Frage: Was ist das V-Modell?  
 Antwort:
+![V-Modell](https://projekte-leicht-gemacht.de/wp-content/uploads/2021/08/v-modell.jpg)
 - lineares Vorgehensmodell
 - fest definierte Phasen
 - Testphasen für jede Entwicklungsphase
@@ -180,16 +181,15 @@ Antwort:
 - Nachteile
   - ausführliche Dokumentation
   - starr und wenig flexibel
-    <img src="https://projekte-leicht-gemacht.de/wp-content/uploads/2021/08/v-modell.jpg">
 
 
 Frage: Was ist das Spiralmodell?  
 Antwort:
+![alt text](https://www.ionos.de/startupguide/fileadmin/StartupGuide/Screenshots_2019/spiralmodell-DE-1.png)
 - iteratives Vorgehensmodell
 - Sektoren nicht unbedingt in jeder Umrundung notwendig
 - Risiko-orientiertes Modell
 - von innen nach außen durchlaufen
-  Antwort:
 - Vorteile
   - flexibles, generisches Modell
   - frühe Einbindung von Auftraggeber
@@ -199,7 +199,6 @@ Antwort:
   - verzögerungen durch regelmäßige Entscheidungen
   - Know-how in Risikoanalyse erforderlich
   - ungeeignet für kleine Projekte
-    <img src="https://www.ionos.de/startupguide/fileadmin/StartupGuide/Screenshots_2019/spiralmodell-DE-1.png">
 
 
 Frage: Was ist das SCRUM?  
