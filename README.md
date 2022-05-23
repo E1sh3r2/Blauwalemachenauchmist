@@ -1,13 +1,7 @@
 # Blauwalemachenauchmist
 
 ## ToDos
-
-- [x] Init repo
-- [x] Publish repo
-- [x] CSS-Styling
-- [ ] Algorithm to display new question
-- [ ] add question id to url
-- [ ] add dashboard to view all answers / questions
+ToDos are displayed in the projects related to this repo.
 
 ## Used Software
 * [Markdown-It](https://github.com/markdown-it/markdown-it) to display questions (Markdown) as HTMTL
