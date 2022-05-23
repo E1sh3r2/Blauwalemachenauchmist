@@ -132,19 +132,26 @@
    * @returns {number} parameter as number or NaN
    */
   const isParamNumber = (param) => {
-    return parseInt(param)
-  }
+    return parseInt(param);
+  };
+
+  /**
+   * Displays question based on parsed search param from current url.
+   * If search param is missing a random question will be displayed
+   */
+  const parseQuestionParam = () => {
+    let param = isParamNumber(getUrlParameter(URL_PARAMETER_QUESTION));
+    if (!isNaN(param)) {
+      currentQuestion = param;
+    } else {
+      selectRandomQuestion();
+    }
+    displayQuestion();
+  };
 
   $currentText.addEventListener("click", onContentClicked);
   $answerWrong.addEventListener("click", selectAnswer(ANSWER.WRONG));
   $answerRight.addEventListener("click", selectAnswer(ANSWER.RIGHT));
 
-  let param = isParamNumber(getUrlParameter(URL_PARAMETER_QUESTION))
-  if (!isNaN(param)) {
-    currentQuestion = param
-  } else {
-    selectRandomQuestion();
-  }
-  displayQuestion();
-
+  document.addEventListener("DOMContentLoaded", parseQuestionParam);
 })();
