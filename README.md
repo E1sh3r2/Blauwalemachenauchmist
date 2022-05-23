@@ -7,6 +7,7 @@
 - [x] CSS-Styling
 - [ ] Algorithm to display new question
 - [ ] add question id to url
+- [ ] add dashboard to view all answers / questions
 
 ## Used Software
 * [Markdown-It](https://github.com/markdown-it/markdown-it) to display questions (Markdown) as HTMTL
