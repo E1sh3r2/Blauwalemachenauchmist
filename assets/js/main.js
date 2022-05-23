@@ -1,7 +1,7 @@
 (() => {
-  const STATES = {ANSWER: "answer", QUESTION: "question"};
-  const ANSWER = {RIGHT: "right", WRONG: "wrong"};
-  const URL_PARAMETER_QUESTION = "question"
+  const STATES = { ANSWER: "answer", QUESTION: "question" };
+  const ANSWER = { RIGHT: "right", WRONG: "wrong" };
+  const URL_PARAMETER_QUESTION = "question";
   const COOKIE_KEY_STATS = "blauwale_stats";
   const $currentText = document.getElementById("currentText");
   const $decisionButtons = document.getElementById("decisionButtons");
@@ -11,7 +11,7 @@
   const mdParser = new markdownit();
 
   let currentState = STATES.QUESTION;
-  let currentQuestion = "";
+  let currentQuestion = 0;
 
   const selectRandomQuestion = () => {
     currentQuestion = Math.floor(Math.random() * questions.length);
@@ -27,8 +27,8 @@
   const displayAnswer = () => {
     $decisionButtons.style.display = "flex";
     $currentText.innerHTML =
-        questions[currentQuestion].question +
-        mdParser.render(questions[currentQuestion].answer);
+      questions[currentQuestion].question +
+      mdParser.render(questions[currentQuestion].answer);
     $currentText.classList.toggle("question");
     currentState = STATES.ANSWER;
   };
@@ -49,7 +49,7 @@
       console.warning("local storage is not available");
     }
 
-    return {answers: {}};
+    return { answers: {} };
   };
 
   /**
@@ -71,10 +71,7 @@
     }
 
     if ("localStorage" in window) {
-      window.localStorage.setItem(
-          COOKIE_KEY_STATS,
-          JSON.stringify(stats)
-      );
+      window.localStorage.setItem(COOKIE_KEY_STATS, JSON.stringify(stats));
     } else {
       console.warning("local storage is not available");
     }
@@ -83,7 +80,7 @@
   const selectAnswer = (answer) => () => {
     saveAnswerToLocalStorage(currentQuestion, answer);
     selectRandomQuestion();
-    setUrlParameter(URL_PARAMETER_QUESTION, currentQuestion)
+    setUrlParameter(URL_PARAMETER_QUESTION, currentQuestion);
   };
 
   /**
@@ -105,9 +102,9 @@
    */
   const getUrlParameter = (param) => {
     const sPageURL = window.location.search.substring(1);
-    const sURLVariables = sPageURL.split('&');
+    const sURLVariables = sPageURL.split("&");
     for (let i = 0; i < sURLVariables.length; i++) {
-      const sParameterName = sURLVariables[i].split('=');
+      const sParameterName = sURLVariables[i].split("=");
       if (sParameterName[0] === param) {
         return sParameterName[1];
       }
@@ -120,10 +117,12 @@
    * @param value new value of parameter
    */
   const setUrlParameter = (param, value) => {
-    if ('URLSearchParams' in window) {
-      var searchParams = new URLSearchParams(window.location.search);
+    if ("URLSearchParams" in window) {
+      const searchParams = new URLSearchParams(window.location.search);
       searchParams.set(param, value);
       window.location.search = searchParams.toString();
+    } else {
+      window.location.search = `?${param}=${value}`;
     }
   };
 
