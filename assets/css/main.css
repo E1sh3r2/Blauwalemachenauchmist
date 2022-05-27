@@ -24,10 +24,13 @@ body {
 html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
+    height: -webkit-fill-available;
 }
 
 body {
     margin: 0;
+    height: 100vh;
+    height: -webkit-fill-available;
 }
 
 main {
@@ -147,7 +150,7 @@ button:-moz-focusring,
 }
 
 .wrapper {
-    height: 100vh;
+    height: -webkit-fill-available;
     display: flex;
     justify-content: center;
     align-items: center;
