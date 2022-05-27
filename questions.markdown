@@ -44,10 +44,10 @@ Antwort:
 
 Frage: Nennen Sie die Säulen der Objekt Orientierung?
 Antwort: 
-- Verkapselung:
-- Vererbung:
-- Polymorphie (Vielgestaltigkeit):
-- Abstraktion:
+- Verkapselung
+- Vererbung
+- Polymorphie (Vielgestaltigkeit)
+- Abstraktion
 
 
 Frage: Beschreiben Sie Verkapselung (OOP)?
@@ -78,10 +78,6 @@ Antwort:
   - Poly = viele, morph = Form 
   - Implementierung von Oberklassen Methoden
   - Methoden können überschrieben werden
-- Abstraktion:
-  - Die anderen Säulen sind eine Form der Abstraktion 
-  - Bei der Modellierung werden bewusst bestimmte Eigenschaften „verborgen“ 
-  - Nur notwendige Eigenschaften bleiben behalten
 
 
 Frage: Beschreiben Sie Abstraktion (OOP)?  
@@ -281,9 +277,9 @@ Antwort:
 
 Frage: Welche Anomalien gibt es (Datenbanken)?  
 Antwort:
-- Änderungsanomalie
-- Löschanomalie
-- Einfüge Anomalie
+- Einfüge-Anomalie
+- Änderungs-Anomalie
+- Lösch-Anomalie
 
 
 Frage: Was ist die Referentielle Integrität?  
@@ -350,3 +346,64 @@ Antwort:
 - MVC 
 - Verhaltensmuster (Behavioral Patterns)
 - Observer
+
+
+Frage: Was ist das Lastenheft?
+Antwort:
+- Wird vom Kunden erstellt
+- definiert Anforderungen
+- Grundlage für das Angebot
+- Basis für die Erstellung des Pflichtenhefts
+- Wird vor der durchführung des Projektes erstellt
+
+
+Frage: Was ist das Pflichtenheft?
+Antwort:
+- Wird vom Auftragnehmer (uns) erstellt
+- definiert konkret die Umsetzung des Projektes
+- Grundlage für Abnahme
+- Wird vor der durchführung des Projektes erstellt
+
+
+Frage: Was sind Fixe Kosten?
+Antwort:
+- Kosten die unabhängig von der Produktionsmenge in immer gleicher Höhe anfallen
+- Beispiele:
+  - Personalkosten
+  - Miete
+  - Strom (für Büroräume)
+  - Wasser (für Büroräume)
+
+
+Frage: Was sind Variable Kosten?
+Antwort:
+- abhängig von produzierter Menge
+- Beispiele:
+  - Lieferkosten
+  - Rohstoffe
+
+
+Frage: Was ist das Gantt-Diagramm?
+Antwort:
+- Diagramm zur Projektplanung
+- zeigt Fortschritt / Verzögerungen im Projekt
+
+
+Frage: Was ist der Kritischer Pfad?
+Antwort:
+- Projektphasen ohne Puffer
+- Verzögerung bewirkt späteres Projektende
+- Einsatz in Netzplantechnik und Gantt-Diagramms
+
+
+Frage: Nennen Sie Imperative Programmiersprachen
+Antwort:
+- [ ALGOL, BASIC, Fortran, Pascal, ada, PL/I,Cobol,C]
+
+
+Frage: Was ist ein Abnahmeprotokoll?
+Antwort
+- Hält Ergebnis des Projektes fest
+- Beendet Projekt
+- nachzureichende Funktionalitäten müssen festgehalten werden
+- Rechnung kann nach unterschriebenen Abnahmeprotokoll gestellt werden
