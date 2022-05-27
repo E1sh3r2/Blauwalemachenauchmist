@@ -402,8 +402,9 @@ Antwort:
 
 
 Frage: Was ist ein Abnahmeprotokoll?
-Antwort
+Antwort:
 - Hält Ergebnis des Projektes fest
 - Beendet Projekt
 - nachzureichende Funktionalitäten müssen festgehalten werden
 - Rechnung kann nach unterschriebenen Abnahmeprotokoll gestellt werden
+- Beginn der Gewährleistung
