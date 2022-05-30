@@ -408,3 +408,12 @@ Antwort:
 - nachzureichende Funktionalitäten müssen festgehalten werden
 - Rechnung kann nach unterschriebenen Abnahmeprotokoll gestellt werden
 - Beginn der Gewährleistung
+
+
+Frage: Was ist eine Relation?
+Antwort:
+- Mehrere Spalten in einer Datenbank werden Relation genannt.
+- Eindeutiger Name von einer Relation (PERSON)
+- Besteht aus einem oder mehreren Attributen
+- Besteht aus keiner oder mehreren Tupeln (Tabellenspalten)
+![](https://www.itwissen.info/lex-images/Beispiel-fuer-Relationen-mit-Schluessel.png)
