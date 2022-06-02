@@ -17,7 +17,7 @@ const STATES = { ANSWER: "answer", QUESTION: "question" };
 const ANSWER = { RIGHT: "right", WRONG: "wrong" };
 
 const URL_PARAMETER_QUESTION = "question";
-const COOKIE_KEY_STATS = "blauwale_stats";
+const COOKIE_KEY_STATS = "blauwaleStats";
 const $currentText = document.getElementById("currentText");
 const $decisionButtons = document.getElementById("decisionButtons");
 const $answerWrong = document.getElementById("answerWrong");
@@ -26,13 +26,19 @@ const $answerRight = document.getElementById("answerRight");
 const mdParser = new markdownit();
 
 let currentState = STATES.QUESTION;
-let currentQuestion = 0;
+let curQuestionIndex = null;
 
 /**
- * Sets current question to a random one from questions collection
+ * Set next question
  */
-const selectRandomQuestion = () => {
-  currentQuestion = Math.floor(Math.random() * questions.length);
+const setNextQuestion = () => {
+  const stats = retrieveStatsFromLocalStorage();
+
+  if (curQuestionIndex === stats.answers.length || curQuestionIndex === null) {
+    curQuestionIndex = 0;
+  } else {
+    curQuestionIndex = stats["curQuestionIndex"] + 1;
+  }
 };
 
 /**
@@ -40,7 +46,7 @@ const selectRandomQuestion = () => {
  */
 const displayQuestion = () => {
   $decisionButtons.style.display = "none";
-  $currentText.innerHTML = questions[currentQuestion].question;
+  $currentText.innerHTML = questions[curQuestionIndex].question;
   $currentText.classList.toggle("question");
   currentState = STATES.QUESTION;
 };
@@ -51,15 +57,15 @@ const displayQuestion = () => {
 const displayAnswer = () => {
   $decisionButtons.style.display = "flex";
   $currentText.innerHTML =
-    questions[currentQuestion].question +
-    mdParser.render(questions[currentQuestion].answer);
+    questions[curQuestionIndex].question +
+    mdParser.render(questions[curQuestionIndex].answer);
   $currentText.classList.toggle("question");
   currentState = STATES.ANSWER;
 };
 
 /**
  * Retrieves all answers as questionId-decision map from local storage
- * @returns answers from local storage. Returns empty object if local storage are not available
+ * @returns answers from local storage. Displays warning in console if local storage is not available
  */
 const retrieveStatsFromLocalStorage = () => {
   if ("localStorage" in window) {
@@ -73,7 +79,17 @@ const retrieveStatsFromLocalStorage = () => {
     console.warning("local storage is not available");
   }
 
-  return { answers: {} };
+  const generateDecisions = [];
+  for (let i = 0; i < questions.length; i++) {
+    const question = questions[i];
+    generateDecisions.push({
+      id: question.id,
+      [ANSWER.RIGHT]: 0,
+      [ANSWER.WRONG]: 0,
+    });
+  }
+
+  return { answers: generateDecisions, curQuestionIndex };
 };
 
 /**
@@ -84,15 +100,54 @@ const retrieveStatsFromLocalStorage = () => {
 const saveAnswerToLocalStorage = (id, decision) => {
   const stats = retrieveStatsFromLocalStorage();
 
-  // increment count of answer
-  if (typeof stats["answers"][id] !== "undefined") {
-    stats["answers"][id][decision].count = stats.count + 1;
+  let index = stats.answers.findIndex((answer) => answer.id === id);
+
+  if (typeof stats["answers"][index] !== "undefined") {
+    stats["answers"][index][decision].count = stats.count + 1;
+
+    if (decision === ANSWER.RIGHT) {
+      stats["answers"][index][ANSWER.RIGHT] += 1;
+    } else {
+      stats["answers"][index][ANSWER.WRONG] += 1;
+    }
+
+    const currentAnswer = stats["answers"][index];
+
+    const curDecisionVal =
+      currentAnswer[ANSWER.RIGHT] - currentAnswer[ANSWER.WRONG];
+
+    // copy previous answer
+    const prevAnswer = { ...stats["answers"][index - 1] };
+    // calculate decision value
+    const prevDecisionVal = prevAnswer[ANSWER.RIGHT] - prevAnswer[ANSWER.WRONG];
+
+    // copy next answer
+    const nextAnswer = { ...stats["answers"][index + 1] };
+    // calculate decision value
+    const nextDecisionVal = nextAnswer[ANSWER.RIGHT] - nextAnswer[ANSWER.WRONG];
+
+    // Swap items if decisionvalues of previous, current and next answer are not in order
+    if (typeof prevAnswer !== "undefined" && prevDecisionVal < curDecisionVal) {
+      const tmp = stats["answers"][index - 1];
+      stats["answers"][index - 1] = stats["answers"][index];
+      stats["answers"][index] = tmp;
+    } else if (
+      typeof nextAnswer !== "undefined" &&
+      curDecisionVal < nextDecisionVal
+    ) {
+      const tmp = stats["answers"][index + 1];
+      stats["answers"][index + 1] = stats["answers"][index];
+      stats["answers"][index] = tmp;
+    }
   } else {
-    stats["answers"][id] = {
+    stats["answers"].push({
+      id: id,
       [ANSWER.RIGHT]: decision === ANSWER.RIGHT ? 1 : 0,
       [ANSWER.WRONG]: decision === ANSWER.WRONG ? 1 : 0,
-    };
+    });
   }
+
+  stats["curQuestionIndex"] = index;
 
   if ("localStorage" in window) {
     window.localStorage.setItem(COOKIE_KEY_STATS, JSON.stringify(stats));
@@ -107,9 +162,9 @@ const saveAnswerToLocalStorage = (id, decision) => {
  * @returns a callback function to be filled with a {@link Answer} as first parameter
  */
 const selectAnswer = (answer) => () => {
-  saveAnswerToLocalStorage(currentQuestion, answer);
-  selectRandomQuestion();
-  setUrlParameter(URL_PARAMETER_QUESTION, currentQuestion);
+  saveAnswerToLocalStorage(curQuestionIndex, answer);
+  setNextQuestion();
+  setUrlParameter(URL_PARAMETER_QUESTION, curQuestionIndex);
 };
 
 /**
@@ -156,30 +211,23 @@ const setUrlParameter = (param, value) => {
 };
 
 /**
- * check parameter is number
- * @param {String} param parameter
- * @returns {Number} parameter as number or NaN
- */
-const isParamNumber = (param) => {
-  return parseInt(param);
-};
-
-/**
  * Displays question based on parsed search param from current url.
- * If search param is missing a random question will be displayed
+ * A random question will be displayed, if search param is missing.
  */
 const parseQuestionParam = () => {
-  let param = isParamNumber(getUrlParameter(URL_PARAMETER_QUESTION));
+  const param = parseInt(getUrlParameter(URL_PARAMETER_QUESTION));
   if (!isNaN(param)) {
-    currentQuestion = param;
+    curQuestionIndex = param;
   } else {
-    selectRandomQuestion();
+    setNextQuestion();
   }
   displayQuestion();
 };
 
-$currentText.addEventListener("click", onContentClicked);
-$answerWrong.addEventListener("click", selectAnswer(ANSWER.WRONG));
-$answerRight.addEventListener("click", selectAnswer(ANSWER.RIGHT));
+document.addEventListener("DOMContentLoaded", () => {
+  $currentText.addEventListener("click", onContentClicked);
+  $answerWrong.addEventListener("click", selectAnswer(ANSWER.WRONG));
+  $answerRight.addEventListener("click", selectAnswer(ANSWER.RIGHT));
 
-document.addEventListener("DOMContentLoaded", parseQuestionParam);
+  parseQuestionParam();
+});

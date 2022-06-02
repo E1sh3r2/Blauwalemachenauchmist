@@ -154,6 +154,7 @@ button:-moz-focusring,
     flex-direction: column;
     max-width: 70vw;
     margin: auto;
+    width: max-content;
 }
 
 .current-text {
@@ -175,6 +176,7 @@ button:-moz-focusring,
 .current-text.question > h1 {
     margin-top: auto;
     margin-bottom: auto;
+    cursor: pointer;
 }
 
 .current-text.question::after {
@@ -254,11 +256,6 @@ button:-moz-focusring,
 /* width */
 ::-webkit-scrollbar {
     width: 8px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    /* background: #f1f1f1; */
 }
 
 /* Handle */
