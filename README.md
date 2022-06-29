@@ -1,9 +1,5 @@
 # Blauwalemachenauchmist
 
-## Domains
-* http://blauwale.ml
-* http://karteikarten.tk
-
 ## ToDos
 ToDos are displayed in the projects related to this repo.
 
